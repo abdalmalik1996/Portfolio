@@ -27,7 +27,6 @@ if(navLink){
         navLink.forEach(link => {
             link.addEventListener("click",()=> {
                 navMenu.classList.remove("show-sidebar")
-                console.log("close");
             })
         })}
 
