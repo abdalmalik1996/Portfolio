@@ -298,6 +298,11 @@ input{
 
 .home__img {
 display: none;
+border-bottom-left-radius: 1000rem;
+border-bottom-right-radius: 100rem;
+border-top-left-radius:300rem;
+border-top-right-radius: 800rem;
+opacity: 0.1;
 }
 
 .home__title {
@@ -1146,16 +1151,22 @@ color: var(--skin-color);
         background: none;
         height: initial;
         align-items: initial;
-        padding: 7rem 0 2rem;
+        padding: 5rem 0 2rem;
     }
 .home__container {
-    row-gap: 2rem;
+    grid-template-columns: repeat(2,1fr);
+}
+.home__data{
+    width: 330px;
+    line-height:2;
 }
 
     .home__img {
         display: block;
-        width: 250px;
-        justify-self: center;
+        width: 150px;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
     
     .home__social {
