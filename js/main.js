@@ -2,7 +2,7 @@
 const navMenu = document.getElementById("sidebar"),
         navTopgle = document.getElementById("nav-toggle"),
         navClose = document.getElementById("nav-close")
-        
+        navLink =document.querySelectorAll(".nav__link");
 /* ========= SIDEBAR Show ==========*/ 
 /* ====== VOLidate if constant Exists =========*/ 
 if(navTopgle) {
@@ -16,8 +16,23 @@ if(navTopgle) {
 if(navClose) {
     navClose.addEventListener("click",()=> {
         navMenu.classList.remove("show-sidebar")
+        
     })
 }
+
+
+
+/* Click id  */
+if(navLink){
+        navLink.forEach(link => {
+            link.addEventListener("click",()=> {
+                navMenu.classList.remove("show-sidebar")
+                console.log("close");
+            })
+        })}
+
+        
+    
 
 
 /* ========= skills ============*/
