@@ -61,6 +61,33 @@ const   tabs =document.querySelectorAll('[data-target]'),
         })
 
 
+        /* ====== certificate popup  =========*/
+        document.querySelectorAll(".timeline__button").forEach(e => {
+        let certificateImg = document.querySelector(".certificate__img__popup");
+        e.addEventListener("click", ()=> {
+            document.querySelector(".certificate__popup").classList.add("open");
+
+            if(e.parentNode.getAttribute("data-content") == ("webdesign") ){
+                certificateImg.src="img/web-design.png";
+                document.querySelector(".link__popup").textContent="https://freecodecamp.org/certification/AbdAlmalik/responsive-web-design";
+                document.querySelector(".certificate__popup-title").textContent = "Responsive Web Design";
+            }
+            
+            if(e.parentNode.getAttribute("data-content") == ("javascript") ){
+                certificateImg.src="img/javascript.png";
+                document.querySelector(".link__popup").textContent="https://freecodecamp.org/certification/AbdAlmalik/javascript-algorithms-and-data-structures";
+                document.querySelector(".certificate__popup-title").textContent = "JavaScript Algorithms and Data Structures";
+            }
+
+        })
+        })
+
+
+        
+        document.querySelector(".certificate__popup-close").addEventListener("click",toggleCertificatePopup);
+        function toggleCertificatePopup(){
+            document.querySelector(".certificate__popup").classList.remove("open");
+        }
 
         /*  =========== MIXITUP FIKTER PORTFOLIO ========= */
 

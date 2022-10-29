@@ -116,6 +116,27 @@ input{
     display: grid;
 }
 
+/* ==== icon */
+.whatsapp{
+    color: #45c554;
+}
+.messenger{
+    background: linear-gradient(40deg, #0099ff 9.4%,
+    #a033ff 51.57%, #ff5280 84.07%, #ff7061 90.59%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.facebook{
+    color: #046ee5;
+}
+.instagram{
+    background: linear-gradient(#0099ff 1.4%,
+    #a033ff 51.57%, #ff5280 84.07%, #ff7061 90.59%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 /* REUSABLE CSS CLASSES */
 .section{
     padding: 6.5rem 0 2rem;
@@ -343,7 +364,6 @@ opacity: 0.1;
 }
 .info__icon{
     font-size: 1.8rem;
-    color: var(--skin-color);
     margin-right: var(--mb-0-75);
 }
 
@@ -399,8 +419,9 @@ transform: scale(1);
 }
 
 .about__description{
-    text-align: justify;
+    text-align: left;
     margin-bottom: var(--mb-2);
+    line-height: 1.5;
 }
 
 
@@ -482,6 +503,7 @@ margin-bottom: var(--mb-0-75);
     margin-bottom: var(--mb-0-25);
 }
 .timeline__text{
+    display: flex;
     font-size: var(--smaller-font-size);
     margin-bottom: var(--mb-1);
 }
@@ -493,6 +515,85 @@ margin-bottom: var(--mb-0-75);
     font-size: var(--saml-font-size);
     color: var(--skin-color);
 }
+.timeline__button {
+    display: inline;
+    color: var(--skin-color);
+    font-size: var(--saml-font-size);
+    display: flex;
+    align-items: center;
+    column-gap: .25rem;
+    cursor: pointer;
+    margin-left: var(--mb-0-75);
+}
+
+.timeline__button-icon{
+    font-size: 1rem;
+    transition: .3s;
+}
+
+.timeline__button:hover .timeline__button-icon{
+    transform: translateX(.25rem);
+}
+
+/* certificate__popup */
+.certificate__popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    z-index: var(--z-modal);
+    opacity: 0;
+    visibility: hidden; /*????????????????*/
+    transition: .3s;
+}
+.certificate__popup.open{
+    opacity: 1;
+    visibility: visible;
+    }
+
+    .certificate__img__popup{
+        width: 600px;
+        border-radius: 1rem;
+    }
+    .certificate__popup-inner{
+        background-color: rgba(39, 38, 38, 0.986);
+        width: 900px;
+        border-radius: .5rem;
+        padding: 2rem;
+        position: relative;
+        text-align: center;
+    }
+    .certificate__popup-close {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        font-size: 1.5rem;
+        color: var(--skin-color);
+        cursor: pointer;
+    }
+    .description__popup{
+        color: var(--text-color);
+    }
+    .certificate__popup-title{
+        font-size: var(--h3-font-size);
+        color: var(--title-color);
+        margin-bottom: var(--mb-2);
+    }
+    .link__popup{
+        color: var(--text-color);
+        transition: .5s;
+    }
+    .link__popup:hover{
+        color: var(--skin-color);
+    }
+    
+
 
 /* ====== skills section ====== */
 .skills__container{
@@ -1123,9 +1224,15 @@ color: var(--skin-color);
     .footer__copy{
         margin-top: var(--mb-3);
     }
-    .potfolio__popup-inner{
+    .certificate__popup-inner{
         width: 420px;
         padding: 2.8rem 1.5rem 2.5rem;
+    }
+    .link__popup{
+        font-size: var(--smaller-font-size);
+    }
+    .potfolio__popup-inner{
+        width: 420px;
     }
     .potfolio__popup-content{
         grid-template-columns: 1fr;
