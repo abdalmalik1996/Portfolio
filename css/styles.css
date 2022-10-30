@@ -136,6 +136,19 @@ input{
     -webkit-background-clip: text;
     color: transparent;
 }
+.email{
+    color: #4593e5;
+}
+.html{
+    color: #f06833;
+}
+.css{
+    color: #1872b9;
+}
+.javascript{
+color: #d6ba31;
+}
+
 
 /* REUSABLE CSS CLASSES */
 .section{
@@ -452,15 +465,22 @@ margin-bottom: var(--mb-0-75);
 
 /* ====== Qualification Section =========== */
 .qualification__continear{
-    grid-template-columns: repeat(2,450px);
+    grid-template-columns: repeat(1,450px);
     column-gap: 3rem;
     justify-content: center;
 }
+.education{
+    grid-template-columns: repeat(1,450px);
+    column-gap: 3rem;
+    justify-content: center;
+}
+
 
 .qualification__title {
     font-size: var(--h3-font-size);
     font-weight: var(--font-meidum);
     margin-bottom: var(--mb-2);
+    text-align: center;
 }
 
 .timline__item{
@@ -858,7 +878,6 @@ visibility: visible;
 }
 .contact__card-icon{
     font-size: 1.8rem;
-    color: var(--title-color);
     margin-bottom: var(--mb-0-25);
 }
 
@@ -1355,24 +1374,6 @@ color: var(--skin-color);
         column-gap: .25rem;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
