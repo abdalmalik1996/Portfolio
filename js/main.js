@@ -119,7 +119,7 @@ const   tabs =document.querySelectorAll('[data-target]'),
         document.addEventListener("click",(e) => {
             if(e.target.classList.contains("work__button")) {
                 tooglePortofiloPopup();
-                protfolioItemDetails(e.target.parentElement);
+                protfolioItemDetails(e.target.parentElement.parentElement);
             }
         })
 
