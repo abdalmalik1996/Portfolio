@@ -157,6 +157,15 @@ color: #d6ba31;
 }
 .react{
     color: #61dafb;
+    animation: rotete 10s linear infinite;
+}
+@keyframes rotete {
+    0% {
+-webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 /* REUSABLE CSS CLASSES */
