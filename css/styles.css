@@ -149,7 +149,15 @@ input{
 .javascript{
 color: #d6ba31;
 }
-
+.bootstrap{
+    color: #7210f5;
+}
+.sass{
+    color: #bf4080;
+}
+.react{
+    color: #61dafb;
+}
 
 /* REUSABLE CSS CLASSES */
 .section{
